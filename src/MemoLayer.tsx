@@ -85,12 +85,12 @@ export function MemoLayer({
             style={{
               position: "fixed", top: 0, left: 0, right: 0, zIndex: 10001,
               display: "flex", alignItems: "center", justifyContent: "center", gap: 12,
-              background: "#fef9c3", borderBottom: "1px solid #fde047",
-              padding: "7px 16px", fontSize: 13, color: "#854d0e", fontWeight: 500,
+              background: "#171717", borderBottom: "1px solid #000",
+              padding: "7px 16px", fontSize: 13, color: "#fff", fontWeight: 500,
               boxShadow: "0 1px 4px rgba(0,0,0,.08)",
             }}
           >
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#a16207"
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fde047"
               strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
               <path d="M15.5 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V8.5z" />
               <path d="M15 3v5a1 1 0 0 0 1 1h5" />
@@ -99,7 +99,7 @@ export function MemoLayer({
             <button
               onClick={onExitMode}
               style={{
-                border: "1px solid #eab308", background: "#fff", color: "#854d0e",
+                border: "1px solid #555", background: "#333", color: "#fff",
                 borderRadius: 6, padding: "2px 12px", fontSize: 12, fontWeight: 600,
                 cursor: "pointer",
               }}
@@ -109,7 +109,7 @@ export function MemoLayer({
           </div>
         </>
       )}
-      {notes.map((n) => (
+      {active && notes.map((n) => (
         <PostIt
           key={n.id}
           note={n}
