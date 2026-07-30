@@ -3,7 +3,7 @@ import type { MemoNote } from "./types";
 
 const NOTE_STYLE: React.CSSProperties = {
   position: "absolute",
-  width: 220,
+  width: "fit-content",
   background: "#fef9c3",
   border: "1px solid #fde047",
   borderRadius: 8,
@@ -97,9 +97,11 @@ export function PostIt({
           if (text !== note.content) onChange(text);
         }}
         style={{
-          border: "none", outline: "none", resize: "vertical", minHeight: 84,
+          border: "none", outline: "none", resize: "both",
+          width: 220, minWidth: 170, minHeight: 84, maxWidth: 640,
           background: "transparent", padding: "8px 10px", fontSize: 13,
           fontFamily: "inherit", lineHeight: 1.5, color: "#422006",
+          display: "block", boxSizing: "border-box",
         }}
       />
     </div>

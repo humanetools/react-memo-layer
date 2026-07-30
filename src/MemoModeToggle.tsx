@@ -18,6 +18,8 @@ export function MemoModeToggle({
         width: 30, height: 30, borderRadius: 8, cursor: "pointer",
         border: active ? "1px solid #eab308" : "1px solid transparent",
         background: active ? "#fef9c3" : "transparent",
+        // 메모 모드 오버레이(z 9998)보다 위 — 모드 중에도 토글 클릭이 메모를 만들지 않게
+        position: "relative", zIndex: 10002,
       }}
     >
       <svg width="17" height="17" viewBox="0 0 24 24" fill="none"
